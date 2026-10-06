@@ -1,0 +1,126 @@
+:root {
+  --background: #f3f4f6;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --button-text: #ffffff;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --shadow: rgba(15, 23, 42, 0.12);
+}
+
+body.dark {
+  --background: #111827;
+  --surface: #1f2937;
+  --text: #f9fafb;
+  --muted: #d1d5db;
+  --border: #4b5563;
+  --accent: #60a5fa;
+  --accent-hover: #93c5fd;
+  --button-text: #111827;
+  --warning: #f59e0b;
+  --danger: #f87171;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: var(--background);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.note-card {
+  width: min(100%, 42rem);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  box-shadow: 0 0.75rem 2rem var(--shadow);
+}
+
+.heading-row,
+.counts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+label {
+  display: block;
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  color: var(--text);
+  background: var(--surface);
+  font: inherit;
+  line-height: 1.5;
+}
+
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.counts {
+  color: var(--muted);
+}
+
+.counts p {
+  margin: 0.6rem 0 1.25rem;
+}
+
+#char-count.warning {
+  color: var(--warning);
+}
+
+#char-count.over {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+button {
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 0.45rem;
+  color: var(--button-text);
+  background: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+@media (max-width: 30rem) {
+  .note-card {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Notes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="note-card">
+    <div class="heading-row">
+      <h1>Quick Notes</h1>
+      <button id="theme-toggle" type="button">Dark mode</button>
+    </div>
+
+    <label for="note-text">Your note</label>
+    <textarea
+      id="note-text"
+      rows="10"
+      maxlength="5000"
+      placeholder="Write something you want to remember..."
+    ></textarea>
+
+    <div class="counts" aria-live="polite">
+      <p id="char-count">0 / 200 characters</p>
+      <p id="word-count">0 words</p>
+    </div>
+
+    <button id="clear-btn" type="button">Clear</button>
+  </main>
+</body>
+</html>
