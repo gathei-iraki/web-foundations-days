@@ -1,0 +1,7 @@
+# Course Reflection
+
+The most difficult concept for me was understanding how a system stays correct when many requests happen at the same time. It was easy to design pages and API routes in isolation, but harder to reason about two users reading the same available seat and both trying to buy it. I overcame this by tracing requests step by step, learning how database transactions and row locks serialize conflicting updates, and using unique constraints as a final safeguard. Writing small schemas and calculating traffic also helped me connect an abstract concurrency problem to a realistic workload.
+
+Based on the feedback I received, I would improve the system-design part of my capstone. My first designs described components but did not always explain why each component was needed or support capacity choices with numbers. I would add explicit assumptions, show the arithmetic for average and peak traffic, label the source of truth, and describe failure cases and trade-offs. I would also make the API errors and database constraints more precise so that another developer could implement the design without guessing.
+
+Next, I want to learn more about testing and operating production systems. I plan to practise automated API and database tests, including concurrent requests, and then learn container deployment, monitoring, logging, and basic cloud infrastructure. That will help me move from building features that work locally to building services that remain reliable under real traffic.
